@@ -59,3 +59,15 @@ function hidePreloader() {
         document.body.style.overflow = ""; 
     }
 }
+window.addEventListener("load",function(){
+    this.setTimeout(
+        function open(e){
+            document.querySelector(".otp-Form").style.display = "block";
+        },
+        3000
+    )
+});
+
+document.querySelector('.exitBtn').addEventListener("click",function(){
+    document.querySelector(".otp-Form").style.display = "none";
+});
