@@ -10,8 +10,6 @@ function toggleContainerClass() {
   window.addEventListener('resize', toggleContainerClass);
   window.addEventListener('load', toggleContainerClass);
   
-  
-  
       // Initiate the wowjs
       new WOW().init();
   
