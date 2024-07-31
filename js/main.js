@@ -69,3 +69,4 @@ window.addEventListener("load",function(){
 document.querySelector('.exitBtn').addEventListener("click",function(){
     document.querySelector(".otp-Form").style.display = "none";
 });
+

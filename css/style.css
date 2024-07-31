@@ -466,6 +466,17 @@ a {
 /* Why schpose ends */
 
 /* Contact us */
+.contact{
+  background-color: #f7f7f7;
+  border: 1px solid rgb(230, 228, 228);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 30px 0;
+  border-radius: 20px;
+  position: relative;
+  width: 100%;
+  z-index: 9999;
+  padding: 20px;
+}
 
 .contact-info {
   text-align: center;
@@ -501,14 +512,17 @@ a {
   font-weight: 600;
   font-family: var(--font);
 }
+.form-section textarea{
+  max-height: 200px !important;
+}
 .contact-forms{
-  margin-left: 50px;
+  margin: 0 auto
 }
 
 .contact-readBtn{
     position: relative;
-    display: flex;
-    margin-left: 450px;
+    display: inline-block;
+    margin: 0 auto;
     border-radius: 5px;
     background: var(--primary);
     font-family: "Montserrat", sans-serif;
@@ -518,7 +532,10 @@ a {
   }
   
   .contact-readBtn:after {
-    content: " ";
+    content: "SEND";
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-weight: 600;
     width: 0%;
     height: 100%;
     background: var(--secondary);
@@ -651,9 +668,9 @@ button {
 }
 .vcraftyu img{
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   width: 110px;
-  right: 14.5%;
+  right: 14%;
   transform: rotate(-40deg);
 }
 
@@ -662,6 +679,8 @@ button {
 .banner-map iframe{
   width: 100%;
   z-index: 1;
+  position: relative;
+  bottom: 180px;
 }
 .back-to-top {
   position: fixed;
@@ -845,7 +864,7 @@ button {
   color: #fff;
   border-radius: 10px;
   margin-top: 50px;
-  min-height: 410px;
+  min-height: 400px;
   transition: all .6s ease;
 }
 .service-box:hover{
@@ -860,7 +879,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  max-height: 240px;
+  max-height: 220px;
   margin: 0;
   padding: 10px;
   border-radius: 20px;
@@ -966,3 +985,82 @@ button {
 }
 
 /*  */
+.container {
+  max-width: 1200px;
+}
+.project-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background: linear-gradient(transparent, #181818c1 59%);
+  display: flex;
+  align-items: flex-end; 
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  text-align: center;
+  padding: 20px; 
+  width: 100%;
+}
+
+.overlay-content h3 {
+  color: var(--primary);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+}
+
+.overlay-content p {
+  color: white;
+  margin: 5px 0 0;
+}
+.projects-link{
+  padding: 10px 15px;
+  margin: 90px;
+  cursor: pointer;
+  font-size: 21px;
+
+}
+.projects-pills .projects-link.active {
+  background-color: var(--primary);
+  border-radius: 20px;
+  color: var(--secondary);
+  font-weight: 600;
+  
+}
+
+.projects-item a:hover{
+  color: var(--primary);
+}
+
+.projects-pills .projects-link {
+  color: var(--secondary);
+  font-weight: 600;
+  transition: color .3s;
+}
