@@ -12,7 +12,6 @@
 }
 html{
   scroll-behavior: smooth;
-  cursor: none;
 }
 
 body {
@@ -151,6 +150,17 @@ a {
   border-radius: 50%;
   pointer-events: none;
   transition: width 0.5s, height 0.5s;
+}
+@media (max-width:990px) {
+.outer-cursor{
+  display: none;
+}
+.inner-cursor{
+  display: none;
+}
+body{
+  cursor: default;
+}
 }
 /* Cursor */
 
@@ -618,6 +628,7 @@ a {
 .why-choose-us {
   height: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .why-title {
@@ -692,6 +703,11 @@ a {
   }
   .whychoose-img-right{
     display: none;
+  }
+}
+@media (max-width:1024){
+  .whychoose-img-right{
+    overflow: hidden;
   }
 }
 /* Why choose ends */
