@@ -167,8 +167,6 @@ body{
 
 
 /* NAVBAR */
-/* General styles for the navbar */
-/* General styles for the navbar */
 .navbar-nav {
   flex-direction: row;
 }
@@ -188,7 +186,7 @@ body{
   box-shadow: 0 1px 10px rgba(0, 0, 0, .2);
   padding: 1.5vw 0;
   position: relative;
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; 
 }
 
 .navbar-brand img {
@@ -226,7 +224,7 @@ body{
 
 /* Dropdown menu styles */
 .dropdown .dropdown-menu {
-  display: none; /* Hide dropdown by default */
+  display: none;
   opacity: 0;
   transition: .5s;
   background-color: #f4ba1a80;
@@ -238,7 +236,7 @@ body{
 
 .dropdown:hover .dropdown-menu,
 .dropdown.show .dropdown-menu {
-  display: block; /* Show dropdown on hover */
+  display: block;
   opacity: 1;
   pointer-events: all;
 }
@@ -267,7 +265,19 @@ body{
   margin-left: 5px;
 }
 
-/* Responsive styles for mobile view */
+/* Responsive styles */
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar-brand {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-brand::before {
     display: none;
@@ -275,103 +285,6 @@ body{
 
   .nav-item.active .nav-link {
     color: var(--primary) !important;
-    border-top: none;
-  }
-
-  /* Mobile specific styles */
-  .navbar {
-    background-color: #333; /* Dark background for navbar in mobile */
-    padding: 20px 10px; /* Adjust padding */
-  }
-
-  .navbar-brand img {
-    width: 150px; /* Smaller logo for mobile */
-    margin-top: 0;
-    padding: 0;
-  }
-
-  .navbar-nav {
-    background-color: #444; /* Slightly lighter background for navbar items */
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px; /* Space between brand and nav items */
-    position: fixed; /* Fix position to the left */
-    top: 0;
-    left: -250px; /* Hide the navbar offscreen */
-    width: 250px; /* Set the width */
-    height: 100%; /* Full height */
-    transition: left 0.3s ease-in-out; /* Smooth slide-in effect */
-  }
-
-  .navbar-nav.show {
-    left: 0; /* Slide the navbar into view */
-  }
-
-  .navbar-nav .nav-item {
-    margin: 5px 0; /* Space between nav items */
-  }
-
-  .navbar-nav .nav-link {
-    color: white !important; /* White text for nav links */
-    padding: 10px 15px; /* Adjust padding */
-    background-color: #555; /* Background for nav links */
-    border-radius: 3px; /* Rounded corners */
-    text-align: center; /* Center text */
-  }
-
-  .navbar-nav .nav-link:hover {
-    background-color: #666; /* Darker background on hover */
-  }
-
-  .dropdown .dropdown-menu {
-    background-color: #333; /* Dark background for dropdown in mobile */
-    color: white;
-    top: auto;
-    left: 0;
-    width: 100%;
-    position: relative;
-    opacity: 1;
-    display: none;
-  }
-
-  .dropdown:hover .dropdown-menu,
-  .dropdown.show .dropdown-menu {
-    display: block; /* Show dropdown on hover */
-  }
-
-  .navbar-nav .dropdown-menu .dropdown-item {
-    color: #fff;
-    padding: 15px 20px;
-    font-size: 16px;
-    border-bottom: 1px solid #444; /* Divider between items */
-  }
-
-  .navbar-nav .dropdown-menu .dropdown-item:hover {
-    background-color: #555;
-    color: #fff;
-    font-weight: 700;
-  }
-
-  .navbar-toggler {
-    border: none;
-    background-color: #555; /* Background for toggler */
-    padding: 5px 10px;
-    border-radius: 3px;
-  }
-
-  .navbar-toggler-icon {
-    color: white; /* Toggler icon color */
-  }
-
-  .navbar-collapse {
-    background-color: #444; /* Background for collapsible menu */
-    border-radius: 5px;
-    padding: 10px;
-  }
-
-  .nav-item.active .nav-link {
-    background-color: #666;
-    color: white !important;
     border-top: none;
   }
 }
