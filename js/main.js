@@ -94,3 +94,15 @@ window.addEventListener("load",function(){
 document.querySelector('.exitBtn').addEventListener("click",function(){
     document.querySelector(".otp-Form").style.display = "none";
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggler = document.querySelector('.navbar-toggler');
+    const navbarNav = document.querySelector('.navbar-nav');
+  
+    toggler.addEventListener('click', function () {
+      navbarNav.classList.toggle('show');
+    });
+  });
+  
+  
